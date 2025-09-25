@@ -38,5 +38,4 @@
 
 ---
 
-### 🐍 GitHub Contribution Snake
-![Snake animation](https://SpoonManiac.github.io/SpoonManiac/github-contribution-grid-snake.svg)
+![Snake animation](https://github.com/SpoonManiac/SpoonManiac/blob/output/github-contribution-grid-snake.svg)
