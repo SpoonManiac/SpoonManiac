@@ -2,7 +2,7 @@ name: Generate and Deploy Snake SVG (Smart)
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # A cada 12 horas, no minuto 0
+    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 permissions:
@@ -17,18 +17,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # Garantir que a pasta dist existe
       - name: Create dist folder
         run: mkdir -p dist
 
-      # Gerar SVG do contribution snake
       - uses: Platane/snk@master
         with:
           github_user_name: SpoonManiac
           github_token: ${{ secrets.GITHUB_TOKEN }}
           svg_out_path: dist/github-contribution-grid-snake.svg
 
-      # Verificar se o SVG mudou
       - name: Check for changes
         id: check_changes
         run: |
@@ -41,21 +38,15 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      # Commit e push somente se houver mudanças
       - name: Commit and Push changes
         if: steps.check_changes.outputs.changed == 'true'
         run: |
           git commit -m "Update contribution snake [skip ci]"
-          git push
-
-      # Upload para Pages e deploy
-      - name: Upload Pages Artifact
-        if: steps.check_changes.outputs.changed == 'true'
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: dist
+          git push origin HEAD:main
 
       - name: Deploy to GitHub Pages
         if: steps.check_changes.outputs.changed == 'true'
-        id: deployment
         uses: actions/deploy-pages@v1
+        with:
+          # Caso queira especificar a pasta explicitamente
+          source: dist
