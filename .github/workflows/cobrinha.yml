@@ -21,7 +21,7 @@ jobs:
         with:
           github_user_name: SpoonManiac
           svg_out_path: dist/github-contribution-grid-snake.svg
-
+      
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v1
         with:
