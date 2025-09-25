@@ -2,5 +2,5 @@
 
 - 🖥️ I’m currently working with RPA (Robot Process Automation)
 - 🌱 I’m currently learning Python, JavaScript and UIPath
-- ["BR"] I'm from Brazil
+- :brazil: I'm from Brazil
 - ⚡ Fun fact: In my free time, i usually work on cars to use in trackdays 🏎️
