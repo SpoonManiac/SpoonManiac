@@ -32,5 +32,6 @@
   
 </div>
 
-![Snake animation](https://raw.githubusercontent.com/SpoonManiac/SpoonManiac/output/github-contribution-grid-snake.svg)
+![Snake animation](https://SpoonManiac.github.io/SpoonManiac/github-contribution-grid-snake.svg)
+
 
