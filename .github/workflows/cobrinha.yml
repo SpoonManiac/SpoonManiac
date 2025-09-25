@@ -20,7 +20,9 @@ jobs:
       - uses: Platane/snk@master
         with:
           github_user_name: SpoonManiac
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           svg_out_path: dist/github-contribution-grid-snake.svg
+
       
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v1
