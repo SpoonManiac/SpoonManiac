@@ -7,14 +7,11 @@ on:
 
 jobs:
   build:
-    name: Jobs to update datas
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      # Snake Animation
       - uses: Platane/snk@master
-        id: snake-gif
         with:
           github_user_name: SpoonManiac
           svg_out_path: dist/github-contribution-grid-snake.svg
@@ -25,4 +22,5 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   
