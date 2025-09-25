@@ -1,42 +1,61 @@
-name: Generate Datas
+name: Generate and Deploy Snake SVG (Smart)
 
 on:
   schedule:
-    - cron: "0 */12 * * *"  
+    - cron: "0 */12 * * *"   # A cada 12 horas, no minuto 0
   workflow_dispatch:
 
 permissions:
-  contents: read    
-  pages: write      
-  id-token: write   
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  build:
-    name: Generate Snake SVG
+  build-and-deploy:
+    name: Build and Deploy Snake
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      
+      # Garantir que a pasta dist existe
       - name: Create dist folder
         run: mkdir -p dist
 
+      # Gerar SVG do contribution snake
       - uses: Platane/snk@master
         with:
           github_user_name: SpoonManiac
           github_token: ${{ secrets.GITHUB_TOKEN }}
           svg_out_path: dist/github-contribution-grid-snake.svg
 
+      # Verificar se o SVG mudou
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/github-contribution-grid-snake.svg
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      # Commit e push somente se houver mudanças
+      - name: Commit and Push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git commit -m "Update contribution snake [skip ci]"
+          git push
+
+      # Upload para Pages e deploy
       - name: Upload Pages Artifact
+        if: steps.check_changes.outputs.changed == 'true'
         uses: actions/upload-pages-artifact@v1
         with:
           path: dist
 
-  deploy:
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
+        if: steps.check_changes.outputs.changed == 'true'
         id: deployment
         uses: actions/deploy-pages@v1
