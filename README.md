@@ -39,4 +39,5 @@
 
 ![Snake animation](https://github.com/SpoonManiac/SpoonManiac/blob/output/snake.svg)
 
+
 </div>
