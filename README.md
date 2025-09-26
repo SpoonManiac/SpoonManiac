@@ -1,7 +1,7 @@
 ## Hey there, I'm Igor Isidoro
 
 - 📍 From Brazil
-- 🖥️ I’m currently working with RPA (Robot Process Automation)
+- 🖥️ I’m currently working with RPA (Robotic Process Automation)
 - 🌱 I’m currently learning Python, Java, JavaScript, and UIPath
 - ⚡ Fun fact: In my free time, I usually work on cars to use in trackdays 🏎️
 
