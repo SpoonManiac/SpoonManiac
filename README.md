@@ -35,5 +35,5 @@
 
 ---
 
-![Snake animation](https://github.com/SpoonManiac/SpoonManiac/blob/output/snake.svg)
+![Snake animation](https://github.com/SpoonManiac/SpoonManiac/blob/output/snake.svg?palette=github-dark)
 
