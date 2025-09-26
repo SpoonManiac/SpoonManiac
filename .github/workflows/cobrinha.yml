@@ -8,10 +8,10 @@ on:
   # Permite execução manual do workflow
   workflow_dispatch:
 
-  # Executa o workflow em pushes para o branch master
+  # Executa o workflow em pushes para o branch main
   push:
     branches:
-      - master
+      - main
 
 jobs:
   generate:
