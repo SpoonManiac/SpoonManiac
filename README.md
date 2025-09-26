@@ -35,4 +35,4 @@
 
 ---
 
-![Snake animation](https://github.com/SpoonManiac/SpoonManiac/blob/output/github-contribution-grid-snake.svg)
+## <img src="https://raw.githubusercontent.com/SpoonManiac/SpoonManiac/output/snake.svg" alt="Snake animation">
