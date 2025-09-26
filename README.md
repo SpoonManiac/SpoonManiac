@@ -1,9 +1,9 @@
 ## Hey there, I'm Igor Isidoro
 
-- 📍 From Brazil
-- 🖥️ I’m currently working with RPA (Robotic Process Automation)
-- 🌱 I’m currently learning Python, Java, JavaScript, and UIPath
-- ⚡ Fun fact: In my free time, I usually work on cars to use in trackdays 🏎️
+- 📍 From Brazil  
+- 🖥️ I’m currently working with RPA (Robotic Process Automation)  
+- 🌱 I’m currently learning Python, Java, JavaScript, and UIPath  
+- ⚡ Fun fact: In my free time, I usually work on cars to use in trackdays 🏎️  
 
 <div>
   <a href="https://github.com/SpoonManiac">
@@ -35,6 +35,9 @@
 
 ---
 
-![Snake animation](https://github.com/SpoonManiac/SpoonManiac/blob/output/github-contribution-grid-snake.svg?palette=github-dark)
+<div align="center">
 
+### 🐍 Watch my contributions turn into a snake!
+![Snake animation](https://github.com/SpoonManiac/SpoonManiac/blob/output/snake.svg)
 
+</div>
