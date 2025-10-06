@@ -1,9 +1,9 @@
 name: Generate snake animation
 
 on:
-  # Executa o workflow a cada 12 horas
+  # Executa o workflow a cada 2 horas
   schedule:
-    - cron: "0 */4 * * *"
+    - cron: "0 */2 * * *"
 
   # Permite execução manual do workflow
   workflow_dispatch:
