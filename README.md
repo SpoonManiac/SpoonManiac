@@ -1,4 +1,4 @@
-## Hey there, I'm Igor Isidoro
+## Hey there, I'm Igor Isidoro 👋
 
 - 📍 From Brazil  
 - 🖥️ I’m currently working with RPA (Robotic Process Automation)  
