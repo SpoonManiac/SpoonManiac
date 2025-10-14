@@ -22,7 +22,7 @@
   <img align="center" alt="CSS3" height="40" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
 </div>
 
-##
+## Connect with me
 
 <div>
   <a href="https://www.linkedin.com/in/igor-isidoro/" target="_blank">
