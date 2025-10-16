@@ -2,7 +2,7 @@
 
 - 📍 From Brazil  
 - 🖥️ I’m currently working with RPA (Robotic Process Automation)  
-- 🌱 I’m currently learning Python, Java, JavaScript, and UIPath  
+- 🌱 I’m currently learning Python, Java, JavaScript, and Cognigy.AI
 - ⚡ Fun fact: In my free time, I usually work on cars to use in trackdays 🏎️  
 
 <div>
